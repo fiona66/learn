@@ -8,7 +8,6 @@ public class Company {
     private String companyName;
     private String companyAddress;
 
-    }
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
