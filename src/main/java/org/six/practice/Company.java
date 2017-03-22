@@ -8,8 +8,23 @@ public class Company {
     private String companyName;
     private String companyAddress;
 
+    public Company(String companyName,int companyAge,String companyAddress){
+        this.companyName = companyName;
+        this.companyAge = companyAge;
+        this.companyAddress = companyAddress;
+    }
+
+
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyAddress(String companyAddress) {
+        this.companyAddress = companyAddress;
     }
 
     public String getCompanyAddress() {
@@ -24,14 +39,6 @@ public class Company {
         return companyAge;
     }
 
-
-    public void setCompanyAddress(String companyAddress) {
-        this.companyAddress = companyAddress;
-    }
-
-    public String getCompanyName() {
-        return companyName;
-    }
 
 }
 
