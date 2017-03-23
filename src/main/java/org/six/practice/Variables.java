@@ -4,7 +4,7 @@ package org.six.practice;
  * Created by yanglu on 3/21/17.
  */
 
-public class BianLiang {
+public class Variables {
 //    // 局部变量
 //    public void pupAge(){
 //        int age = 0;
@@ -13,7 +13,7 @@ public class BianLiang {
 //    }
 //
 //    public  static  void main(String args[]){
-//        BianLiang jbbLiang = new BianLiang();
+//        Variables jbbLiang = new Variables();
 //        jbbLiang.pupAge();
 //    }
 
@@ -23,7 +23,7 @@ public class BianLiang {
 //    // 私有变量，仅在该类可见
 //    private double salary;
 //    //在构造器中对name赋值
-//    public BianLiang (String empName){
+//    public Variables (String empName){
 //        name = empName;
 //    }
 //    //设定salary的值
@@ -37,7 +37,7 @@ public class BianLiang {
 //    }
 //
 //    public static void main(String args[]){
-//        BianLiang empOne = new BianLiang("RUNOOB");
+//        Variables empOne = new Variables("RUNOOB");
 //        empOne.setSalary(1000);
 //        empOne.printEmp();
 //    }

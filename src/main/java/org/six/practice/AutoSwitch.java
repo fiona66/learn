@@ -3,7 +3,7 @@ package org.six.practice;
 /**
  * Created by yanglu on 3/20/17.
  */
-public class ZiDongZhuanHuan {
+public class AutoSwitch {
     public static void main(String[] args){
         char c1='a';//定义一个char类型
         int i1 = c1;//char自动类型转换为int
