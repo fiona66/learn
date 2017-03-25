@@ -15,6 +15,16 @@ public class Company {
 //        System.out.println("公司名称:"+companyName+"\n"+"公司成立年限:"+companyAge+"\n"+"公司地址是:"+companyAddress);
     }
 
+    public boolean hasSentOfferToSix(){
+        boolean offer;
+        if(this.companyName != "哔哩哔哩"){
+            offer = true;
+        }else{
+            offer = false;
+        }
+        return offer;
+    }
+
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
