@@ -35,11 +35,12 @@ public class CompanyTest {
     @Test
     public void testCompanySentOffer(){
         // 实例化一个名叫yiguo的对象并赋值
-        Company yiguo = new Company("易果生鲜", 11, "上海长宁区金钟路999号C座易贸大厦8楼");
+        Company yiguo = new Company("哔哩哔哩", 11, "上海长宁区金钟路999号C座易贸大厦8楼");
         // 赋值,将该对象调用hasSentOfferToSix这个方法的值给offer
         boolean offer = yiguo.hasSentOfferToSix();
         // 断言返回的offer值是否是true(易果有发offer,所以此处返回为true才是正确的)
-        Assert.assertEquals(offer,true);
+        Assert.assertEquals(false, offer);
+
     }
 
 }

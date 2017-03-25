@@ -16,8 +16,9 @@ public class Company {
     }
 
     public boolean hasSentOfferToSix(){
+        String bilibili = new String("哔哩哔哩");
         boolean offer;
-        if(this.companyName != "哔哩哔哩"){
+        if(!this.companyName.equals(bilibili)){
             offer = true;
         }else{
             offer = false;
