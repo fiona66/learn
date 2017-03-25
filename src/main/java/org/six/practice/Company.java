@@ -50,8 +50,7 @@ public class Company {
 
 
     public static void main(String[] args) {
-        Company yiguo = new Company("易果生鲜", 11, "上海长宁区金钟路999号C座易贸大厦8楼");
-        System.out.println(yiguo);
+
     }
 
 }
