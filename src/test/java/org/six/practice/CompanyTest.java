@@ -64,11 +64,12 @@ public class CompanyTest {
         // 若未给offer,则打印“(该公司)没有给六六发Offer”
         int counter = 0;
         for (int i = 0; i < companies.size(); i++) {
+            Company company= companies.get(i);
             if(companies.get(i).hasSentOfferToSix()){
-                System.out.println(companies.get(i).getCompanyName()+"给六六发了offer");
+                System.out.println(company.getCompanyName()+"给六六发了offer");
                 counter = counter + 1;
             }else{
-                System.out.println(companies.get(i).getCompanyName()+"没有给六六发offer");
+                System.out.println(company.getCompanyName()+"没有给六六发offer");
             }
         }
 
