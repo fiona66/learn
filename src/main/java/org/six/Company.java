@@ -8,6 +8,13 @@ public class Company {
     private int companyAge;
     private String companyAddress;
 
+    // 构造方法(有参数)
+    public Company(String companyName, int companyAge, String companyAddress){
+        this.companyName = companyName;
+        this.companyAge = companyAge;
+        this.companyAddress = companyAddress;
+    }
+
     //添加companyName属性的get类
     public String getCompanyName() {
         return companyName;
@@ -36,6 +43,20 @@ public class Company {
     //添加companyName属性的get类
     public void setCompanyAge(String companyAddress) {
         this.companyAddress = companyAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "companyName='" + companyName + '\'' +
+                ", companyAge=" + companyAge +
+                ", companyAddress='" + companyAddress + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        Company yiguo = new Company("易果生鲜", 11, "上海长宁金钟路");
+        System.out.println(yiguo);
     }
 }
 
