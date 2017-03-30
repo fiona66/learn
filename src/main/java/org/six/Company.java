@@ -9,10 +9,10 @@ public class Company {
     private String companyAddress;
 
     // 构造方法(有参数)
-    public Company(String companyName, int companyAge, String companyAddress){
-        this.companyName = companyName;
-        this.companyAge = companyAge;
-        this.companyAddress = companyAddress;
+    public Company(String cName, int cAge, String cAddress){
+        this.companyName = cName;
+        this.companyAge = cAge;
+        this.companyAddress = cAddress;
     }
 
     //添加companyName属性的get类
@@ -43,6 +43,12 @@ public class Company {
     //添加companyName属性的get类
     public void setCompanyAge(String companyAddress) {
         this.companyAddress = companyAddress;
+    }
+
+    public boolean hasSentOfferToSix(){
+        if(!companyName.equals("哔哩哔哩")){
+            return true;
+        } return false;
     }
 
     @Override
