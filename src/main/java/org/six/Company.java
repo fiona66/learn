@@ -31,8 +31,8 @@ public class Company {
     }
 
     //添加companyAge属性的set类
-    public void companyAddress(int companyAge) {
-        this.companyAge = companyAge;
+    public void setCompanyAge(String companyAddress) {
+        this.companyAddress = companyAddress;
     }
 
     //添加companyAddress属性的get类
@@ -40,9 +40,9 @@ public class Company {
         return companyAddress;
     }
 
-    //添加companyName属性的get类
-    public void setCompanyAge(String companyAddress) {
-        this.companyAddress = companyAddress;
+    //添加companyAge属性的set类
+    public void setCompanyAddress(int companyAge) {
+        this.companyAge = companyAge;
     }
 
     public boolean hasSentOfferToSix(){
