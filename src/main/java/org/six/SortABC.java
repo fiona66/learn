@@ -6,7 +6,7 @@ package org.six;
 public class SortABC {
     public SortABC(int x,int y,int z){
         int temp = 0;
-        if(x<y&&x<z){
+        if(x<=y&&x<=z){
             if(y>z){
                 temp = y;
                 y = z;
@@ -14,7 +14,7 @@ public class SortABC {
             }
         }
 
-        if(x<y&&x>z){
+        if(x<=y&&x>=z){
             temp = x;
             x = z;
             z = temp;
@@ -23,13 +23,13 @@ public class SortABC {
             z = temp;
         }
 
-        if(x<z&&x>y){
+        if(x<=z&&x>=y){
             temp = x;
             x = y;
             y = temp;
         }
 
-        if(x>y&&x>z){
+        if(x>=y&&x>=z){
             temp = x;
             x = z;
             z = temp;

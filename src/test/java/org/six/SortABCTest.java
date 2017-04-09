@@ -29,6 +29,10 @@ public class SortABCTest {
         new SortABC(20,50,82);
         new SortABC(32,95,46);
         new SortABC(47,96,33);
+        new SortABC(10,12,10);
+        new SortABC(20,20,66);
+        new SortABC(20,50,20);
+        new SortABC(50,50,15);
     }
 
 }
