@@ -40,7 +40,6 @@ public class AscCArray {
         int min;
         int j=0;
         int i=0;
-//        min = A[0];
         for(int k=0;k<C.length;k++){
             if(k<A.length){
                 C[k]=A[i];
