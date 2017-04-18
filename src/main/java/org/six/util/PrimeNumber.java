@@ -13,15 +13,4 @@ public class PrimeNumber {
             }
         }return true;
     }
-
-    public static void main(String[] args) {
-        int count=0;
-        for(int i=101;i<200;i++){
-            if(isPrimeNumber(i)){
-                count++;
-                System.out.println(i+"是素数");
-            }
-        }
-        System.out.println("100-200之间的素数有:"+count+"个");
-    }
 }
