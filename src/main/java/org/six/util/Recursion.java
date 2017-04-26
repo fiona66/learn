@@ -8,8 +8,7 @@ public class Recursion {
         if(n==1){
             return 1;
         }else {
-            int result = n*caculateRecursion(n-1);
-            return result;
+            return n*caculateRecursion(n-1);
         }
 
     }
