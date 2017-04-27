@@ -23,8 +23,9 @@ public class ArrayExercise4 {
         for (i = 1; i < num; i++)
         {
             temp = arrayC[i];
-            for (j = i; j > 0 && arrayC[j - 1] > temp; j--)
+            for (j = i; j > 0 && arrayC[j - 1] > temp; j--){
                 arrayC[j] = arrayC[j - 1];
+            }
             arrayC[j] = temp;
         }
         return arrayC;
