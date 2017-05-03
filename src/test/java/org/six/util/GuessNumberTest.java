@@ -1,17 +1,15 @@
 package org.six.util;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.six.util.ArrayExercise2.AverageScore;
 
 /**
- * Created by yanglu on 4/23/17.
+ * Created by yanglu on 5/3/17.
  */
-public class ArrayExercise2Test {
+public class GuessNumberTest {
     @Before
     public void setUp() throws Exception {
 
@@ -23,9 +21,11 @@ public class ArrayExercise2Test {
     }
 
     @Test
-    public void printScoresTest() throws Exception {
-        double[] scores = {1,2,3,4,5,6,7,8,9,10};
-        AverageScore(scores);
+    public void testGuessNumber() throws Exception{
+        GuessNumber guessNumber=new GuessNumber();
+        guessNumber.isRightNumber(30);
+        guessNumber.isRightNumber(100);
+        guessNumber.isRightNumber(423);
     }
 
 }
