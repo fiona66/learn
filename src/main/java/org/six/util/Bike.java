@@ -3,7 +3,7 @@ package org.six.util;
 /**
  * Created by yanglu on 5/3/17.
  */
-public class Bike implements Vihicle2 {
+class Bike implements Vihicle2 {
     public void start(){
         System.out.println("bike start");
     }
