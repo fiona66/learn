@@ -1,3 +1,5 @@
+package org.six.util;
+
 import com.google.gson.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
