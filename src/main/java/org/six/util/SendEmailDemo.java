@@ -12,13 +12,13 @@ public class SendEmailDemo {
     public static void main(String [] args)
     {
         // 收件人电子邮箱
-        String to = "ylfiona66@gmail.com";
+        String to = "waterdkx@gmail.com";
 
         // 发件人电子邮箱
         String from = "lulu_fiona@163.com";
 
-        // 指定发送邮件的主机为 smtp.qq.com
-        String host = "smtp.163.com";  //QQ 邮件服务器
+        // 指定发送邮件的主机为 smtp.163.com
+        String host = "smtp.163.com";  //163 邮件服务器
 
         // 获取系统属性
         Properties properties = System.getProperties();
@@ -47,7 +47,7 @@ public class SendEmailDemo {
                     new InternetAddress(to));
 
             // Set Subject: 头部头字段
-            message.setSubject("This is the Subject Line!");
+            message.setSubject("66发送的邮件主题");
 
             // 设置消息体
             message.setText("This is actual message");
