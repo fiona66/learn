@@ -28,6 +28,7 @@ public class JDBCDemo {
 //        date currentdate=date.getTime();
         FlightDemo getminprice=new FlightDemo();
         int minprice=getminprice.getMinPrice();
+        Object getFlightNumber=getminprice.getFlightNumber();
         try{
             //STEP 2: Register JDBC driver
             Class.forName("com.mysql.jdbc.Driver");
@@ -43,7 +44,7 @@ public class JDBCDemo {
             sql = "SELECT * FROM flightminprice";
             String demo = String.valueOf(Math.random()).substring(2,5);
             System.out.println(demo);
-            String sql2="INSERT INTO flightminprice(flight_num,minprice,querytime) VALUES ('"+ demo +"' ,'"+ minprice +"','"+ ft.format(date)+"')";
+            String sql2="INSERT INTO flightminprice(flight_num,minprice,querytime) VALUES ('"+ getFlightNumber +"' ,'"+ minprice +"','"+ ft.format(date)+"')";
 
 //            String sql2="INSERT INTO flightminprice(flight_num,minprice,querytime) VALUES"+"('Demo' " + ",123"+",'+date.toString()')";
 //            int rs1 = stmt.executeUpdate("INSERT INTO flightminprice(flight_num,minprice,querytime) VALUES('Demo',123456,'2017-06-05 18:48:40')");

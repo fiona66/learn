@@ -1,6 +1,7 @@
 package org.six.util;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -64,11 +65,12 @@ public class FlightDemo {
         HashMap res = gson.fromJson(json, HashMap.class);
         Object value3 =res.get("Route");
         System.out.println(value3);
-        String value4 = document.text();
-        HashMap res1 = gson.fromJson(value4,HashMap.class);
-        Object FlightNumber = res1.get("FlightNumber");
-        System.out.println(FlightNumber);
+//        String value4 = document.text();
+        HashMap res1 = gson.fromJson((JsonElement) value3,HashMap.class);
+        Object value4 = res1.get("Type");
+        String flightNumber = value4.toString();
+        System.out.println(flightNumber);
 
-        return FlightNumber;
+        return flightNumber;
     }
 }
