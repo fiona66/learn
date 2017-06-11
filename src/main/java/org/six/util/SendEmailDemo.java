@@ -5,13 +5,14 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.List;
 import java.util.Properties;
 
 /**
  * Created by yanglu on 5/9/17.
  */
 public class SendEmailDemo {
-    public void timingSendEmail(int afterToday)
+    public void SendEmail(int afterToday)
     {
         // 收件人电子邮箱
 //        String to = "ylfiona66@gmail.com";
@@ -60,15 +61,26 @@ public class SendEmailDemo {
             message.setSubject("66发送的"+departureTime+"春秋航空沙巴--上海最低价格信息");
 
             // 设置消息体
-
+            JDBCDemo jdbcDemo = new JDBCDemo();
+            List<FlightEveryDayMinPrice> flightEveryDayMinPriceList= null;
             try {
-                int minprice=getminprice.getMinPrice(afterToday);
-                message.setText("Hello ~\n"+departureTime+"沙巴--上海春秋航空最低机票价格为:"+minprice);
-            } catch (ParseException e) {
-                e.printStackTrace();
+                flightEveryDayMinPriceList = jdbcDemo.query("select * from flightminprice where departure_date between '2017-06-12' and '2017-06-30' ;");
+                message.setText(String.valueOf(flightEveryDayMinPriceList));
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
+            System.out.println(flightEveryDayMinPriceList);
+
+//            try {
+//                int minprice=getminprice.getMinPrice(afterToday);
+////                message.setText("Hello ~\n"+departureTime+"沙巴--上海春秋航空最低机票价格为:"+minprice);
+//            } catch (ParseException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             // 发送消息
             Transport.send(message);

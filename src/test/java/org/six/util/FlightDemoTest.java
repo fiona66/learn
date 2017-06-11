@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -23,12 +25,17 @@ public class FlightDemoTest {
     public void testAddFlightDateToMySQL() throws Exception{
         FlightDemo flightDemo = new FlightDemo();
         JDBCDemo jdbcDemo = new JDBCDemo();
-        for(int i =1;i<20;i++){
-            flightDemo.getDepartureTime(i);
-            flightDemo.getMinPrice(i);
-            flightDemo.getFlightNumber(i);
-            jdbcDemo.addToMySQL(i);
-        }
+//        for(int i =1;i<20;i++){
+//            flightDemo.getDepartureTime(i);
+//            flightDemo.getMinPrice(i);
+//            flightDemo.getFlightNumber(i);
+//            jdbcDemo.addToMySQL(i);
+//        }
+        List<FlightEveryDayMinPrice> flightEveryDayMinPriceList=jdbcDemo.query("select * from flightminprice where departure_date between '2017-06-12' and '2017-06-30' ;");
+        System.out.println(flightEveryDayMinPriceList);
+
+        SendEmailDemo sendEmailDemo = new SendEmailDemo();
+        sendEmailDemo.SendEmail(1);
     }
 
 }
