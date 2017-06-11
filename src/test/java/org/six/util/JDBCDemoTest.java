@@ -20,9 +20,9 @@ public class JDBCDemoTest {
 
     }
     @Test
-    public void testAddMinPriceToMySQL() throws Exception{
+    public void testAddMinPriceToMySQL(int afterToday) throws Exception{
         JDBCDemo jdbcDemo = new JDBCDemo();
-        jdbcDemo.addToMySQL();
+        jdbcDemo.addToMySQL(afterToday);
     }
 
 }

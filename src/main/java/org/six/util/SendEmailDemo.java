@@ -3,16 +3,20 @@ package org.six.util;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.Properties;
 
 /**
  * Created by yanglu on 5/9/17.
  */
 public class SendEmailDemo {
-    public static void main(String [] args)
+    public void timingSendEmail(int afterToday)
     {
         // 收件人电子邮箱
-        String to = "waterdkx@gmail.com";
+//        String to = "ylfiona66@gmail.com";
+//        String to = "waterdkx@gmail.com";
+        String[] to={"waterdkx@gmail.com","ylfiona66@gmail.com"};
 
         // 发件人电子邮箱
         String from = "lulu_fiona@163.com";
@@ -43,21 +47,36 @@ public class SendEmailDemo {
             message.setFrom(new InternetAddress(from));
 
             // Set To: 头部头字段
-            message.addRecipient(Message.RecipientType.TO,
-                    new InternetAddress(to));
+            for (String receiver : to) {
+                message.addRecipient(Message.RecipientType.TO,
+                        new InternetAddress(receiver));
+            }
+
+            // Set 动态变化的主题&正文信息
+            FlightDemo getminprice=new FlightDemo();
+            String departureTime = getminprice.getDepartureTime(afterToday);
 
             // Set Subject: 头部头字段
-            message.setSubject("66发送的邮件主题");
+            message.setSubject("66发送的"+departureTime+"春秋航空沙巴--上海最低价格信息");
 
             // 设置消息体
-            message.setText("This is actual message");
+
+            try {
+                int minprice=getminprice.getMinPrice(afterToday);
+                message.setText("Hello ~\n"+departureTime+"沙巴--上海春秋航空最低机票价格为:"+minprice);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             // 发送消息
             Transport.send(message);
-            System.out.println("Sent message successfully....from w3cschool.cc");
+            System.out.println("Sent message successfully....");
         }catch (MessagingException mex) {
             mex.printStackTrace();
         }
     }
+
 }
 

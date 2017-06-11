@@ -9,9 +9,9 @@ public class TimerDemo {
     Timer timer;
     public TimerDemo(){
         timer = new Timer();
-        Date firsttime = new Date(117,4,22,19,49,03);
+        Date firsttime = new Date(117,5,11,11,30,03);
         System.out.println(firsttime);
-        timer.schedule(new TimerTaskTest(),firsttime,60000);
+        timer.schedule(new TimerTaskTest(4),firsttime,60000*60*24);
     }
 
     public static void main(String[] args) {
