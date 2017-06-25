@@ -17,7 +17,8 @@ public class SendEmailDemo {
         // 收件人电子邮箱
 //        String to = "ylfiona66@gmail.com";
 //        String to = "waterdkx@gmail.com";
-        String[] to={"waterdkx@gmail.com","ylfiona66@gmail.com"};
+//        String[] to={"waterdkx@gmail.com","ylfiona66@gmail.com"};
+        String[] to = {"ylfiona66@gmail.com"};
 
         // 发件人电子邮箱
         String from = "lulu_fiona@163.com";
