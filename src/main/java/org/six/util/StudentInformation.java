@@ -70,14 +70,13 @@ public class StudentInformation {
 
     @Override
     public String toString() {
-        return "StudentInformation{" +
+        return
                 "id=" + id +
                 ", sid=" + sid +
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", subject='" + subject + '\'' +
                 ", grade='" + grade + '\'' +
-                ", birth='" + birth + '\'' +
-                '}';
+                ", birth='" + birth + '\'';
     }
 }

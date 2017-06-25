@@ -41,6 +41,7 @@ public class SqlQuery {
             while(rs.next()){
                 //Retrieve by column name
                 SchQuery schQuery = new SchQuery();
+                int id = rs.getInt("id");
                 int sid = rs.getInt("sid");
                 String name = rs.getString("name");
                 String gender = rs.getString("gender");
@@ -49,6 +50,7 @@ public class SqlQuery {
                 String birth = rs.getString("birth");
 
                 StudentInformation studentInformation = new StudentInformation();
+                studentInformation.setId(id);
                 studentInformation.setSid(sid);
                 studentInformation.setName(name);
                 studentInformation.setGender(gender);
