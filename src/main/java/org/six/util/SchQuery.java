@@ -1,8 +1,5 @@
 package org.six.util;
 
-import org.apache.tools.ant.filters.StringInputStream;
-
-import javax.accessibility.AccessibleContext;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +16,7 @@ public class SchQuery {
     private JButton btnClose;
     private JTextField sid;
     private JTextField name;
-    private JTextField sbuject;
+    private JTextField subject;
     private JTextField grade;
     private JTextField birth;
 
@@ -46,7 +43,7 @@ public class SchQuery {
             public void actionPerformed(ActionEvent e) {
                 sid.setText("");
                 name.setText("");
-                sbuject.setText("");
+                subject.setText("");
                 grade.setText("");
                 birth.setText("");
             }
@@ -54,13 +51,13 @@ public class SchQuery {
     }
     public void querySql(String sql){
         try {
-            SqlQuery sqlQuery = new SqlQuery();
-            List<StudentInformation> ret=sqlQuery.query(sql);
+            SqlExecutor sqlExecutor = new SqlExecutor();
+            List<StudentInformation> ret= sqlExecutor.query(sql);
             System.out.println(ret);
             StudentInformation studentInformation =ret.get(0);
             sid.setText(String.valueOf(studentInformation.getSid()));
             name.setText(studentInformation.getName());
-            sbuject.setText(studentInformation.getSubject());
+            subject.setText(studentInformation.getSubject());
             grade.setText(studentInformation.getGrade());
             birth.setText(studentInformation.getBirth());
         } catch (IOException e1) {

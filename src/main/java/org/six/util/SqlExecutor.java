@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by yanglu on 5/7/17.
  */
-public class SqlQuery {
+public class SqlExecutor {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL="jdbc:mysql://127.0.0.1:3306/flight_min_price?useUnicode=true&characterEncoding=UTF-8";
 
@@ -91,7 +91,7 @@ public class SqlQuery {
 
 
 
-    public int insert(String sql) throws IOException, ParseException {
+    public int executeUpdate(String sql) throws IOException, ParseException {
         Connection conn = null;
         Statement stmt = null;
         int ret = 0;

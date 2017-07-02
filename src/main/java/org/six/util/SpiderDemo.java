@@ -27,7 +27,7 @@ public class SpiderDemo {
             Object value1 =res.get("error");
             Double value2 = (Double) value1;
             Integer value3 = value2.intValue();
-            System.out.println(value3);
+            System.out.println(value3+"\n");
 
             //获取指定class的内容指定tag的元素
 //            Elements liElements = document.getElementsByClass("content").get(0).getElementsByTag("li");

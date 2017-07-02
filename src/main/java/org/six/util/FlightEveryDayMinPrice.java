@@ -53,7 +53,7 @@ public class FlightEveryDayMinPrice {
 
     @Override
     public String toString() {
-        return "FlightEveryDayMinPrice{" +
+        return "{" +
                 "id=" + id +
                 ", flightNumber='" + flightNumber + '\'' +
                 ", minPrice='" + minPrice + '\'' +

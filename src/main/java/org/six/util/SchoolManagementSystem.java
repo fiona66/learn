@@ -14,28 +14,21 @@ public class SchoolManagementSystem {
 
 
     private JPanel SchoolManagement;
-    private JComboBox comboBox1;
     private JButton btnQueryAll;
     private JTextArea textArea1;
 
     public SchoolManagementSystem() {
-        comboBox1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         btnQueryAll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String sql="select * from student_system;";
-                SqlQuery sqlQuery = new SqlQuery();
+                SqlExecutor sqlExecutor = new SqlExecutor();
                 String A ="";
                 try {
-                    List<StudentInformation> ret=sqlQuery.query(sql);
+                    List<StudentInformation> ret= sqlExecutor.query(sql);
                     for(int i=0;i<ret.size();i++){
 //                        String sql1 = "select * from student_system where id="+i;
-//                        List<StudentInformation> ret1=sqlQuery.query(sql1);
+//                        List<StudentInformation> ret1=sqlExecutor.query(sql1);
                         String B = ret.get(i).toString()+"\n";
                         A = A+B;
                     }

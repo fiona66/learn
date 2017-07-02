@@ -59,7 +59,8 @@ public class SendEmailDemo {
             String departureTime = getminprice.getDepartureTime(afterToday);
 
             // Set Subject: 头部头字段
-            message.setSubject("66发送的"+departureTime+"春秋航空沙巴--上海最低价格信息");
+//            message.setSubject("66发送的"+departureTime+"春秋航空沙巴--上海最低价格信息");
+            message.setSubject("66发送的6月12日-6月30日沙巴--上海航班最低价格信息(春秋航空)");
 
             // 设置消息体
             JDBCDemo jdbcDemo = new JDBCDemo();
@@ -72,7 +73,7 @@ public class SendEmailDemo {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            System.out.println(flightEveryDayMinPriceList);
+            System.out.println(flightEveryDayMinPriceList+"\n");
 
 //            try {
 //                int minprice=getminprice.getMinPrice(afterToday);
