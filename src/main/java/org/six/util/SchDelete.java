@@ -34,6 +34,11 @@ public class SchDelete {
                     try {
                         sqlExecutor.executeUpdate(sql1);
                         JOptionPane.showMessageDialog(null, "删除成功", "删除结果",JOptionPane.WARNING_MESSAGE);
+                        id.setText("");
+                        name.setText("");
+                        subject.setText("");
+                        grade.setText("");
+                        birth.setText("");
                     } catch (IOException e1) {
                         e1.printStackTrace();
                     } catch (ParseException e1) {

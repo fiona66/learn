@@ -18,7 +18,6 @@ public class SchInput {
     private JTextField grade;
     private JTextField birth;
     private JPanel SchInput;
-    private JTextField errorMessage;
     private JTextField gender;
 
     public SchInput() {
@@ -33,8 +32,7 @@ public class SchInput {
                 String sgender = gender.getText();
 
                 if (id.equals("") || sname.equals("") || ssubject.equals("") || sgrade.equals("") || sbirth.equals("")||gender.equals("")) {
-                    errorMessage.setVisible(true);
-                    errorMessage.setText("输入内容不允许为空");
+                    JOptionPane.showMessageDialog(null, "输入不允许为空", "Error",JOptionPane.WARNING_MESSAGE);
                 }else {
                     String sql = "insert into student_system(sid,name,gender,subject,grade,birth) values ("+id+",'"+sname+"','"+sgender+"','"+ssubject+"','"+sgrade+"','"+sbirth+"');";
                     insertSql(sql);
