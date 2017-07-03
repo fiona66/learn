@@ -32,9 +32,9 @@ public class SchInput {
                 String sbirth = birth.getText();
                 String sgender = gender.getText();
 
-                if (id.equals("") || sname.equals("") || ssubject.equals("") || sgrade.equals("") || sbirth.equals("")) {
+                if (id.equals("") || sname.equals("") || ssubject.equals("") || sgrade.equals("") || sbirth.equals("")||gender.equals("")) {
                     errorMessage.setVisible(true);
-                    errorMessage.setText("内容均不能为空");
+                    errorMessage.setText("输入内容不允许为空");
                 }else {
                     String sql = "insert into student_system(sid,name,gender,subject,grade,birth) values ("+id+",'"+sname+"','"+sgender+"','"+ssubject+"','"+sgrade+"','"+sbirth+"');";
                     insertSql(sql);
