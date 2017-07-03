@@ -110,7 +110,7 @@ public class SqlExecutor {
             stmt = conn.createStatement();
 
 
-            //STEP 4: Execute a query
+            //STEP 4: Execute a updatesql
             ret = stmt.executeUpdate(sql);
             //STEP 5: Extract data from result set
 
