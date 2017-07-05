@@ -22,7 +22,18 @@
           <verifyInputWhenFocusTarget value="true"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="b985e" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+              <name value="菜单栏"/>
+              <toolTipText value=""/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <component id="54e7e" class="javax.swing.JButton" binding="btnQueryAll">
         <constraints>

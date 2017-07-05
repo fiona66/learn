@@ -1,6 +1,7 @@
 package org.six.util;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -16,9 +17,12 @@ public class SchoolManagementSystem {
     private JPanel SchoolManagement;
     private JButton btnQueryAll;
     private JTextArea textArea1;
+    private JComboBox comboBox1;
+    
+
 
     public SchoolManagementSystem() {
-        btnQueryAll.addActionListener(new ActionListener() {
+            btnQueryAll.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String sql="select * from student_system;";
@@ -49,5 +53,6 @@ public class SchoolManagementSystem {
         frame.pack();
         frame.setVisible(true);
     }
+
 
 }
