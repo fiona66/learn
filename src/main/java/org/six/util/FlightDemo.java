@@ -79,6 +79,7 @@ public class FlightDemo {
         String json = document.text();
         Gson gson=new Gson();
         HashMap res = gson.fromJson(json, HashMap.class);
+        System.out.println(res);
         Object value3 =res.get("Route");
         System.out.println(value3);
         ArrayList list_1 = (ArrayList) value3;
@@ -91,5 +92,7 @@ public class FlightDemo {
         System.out.println(flightNumber);
 
         return flightNumber;
+
     }
+
 }
