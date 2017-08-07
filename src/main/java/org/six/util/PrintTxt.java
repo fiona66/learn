@@ -13,13 +13,13 @@ public class PrintTxt {
             File writename = new File("/Users/yanglu/Downloads/test.txt");
             FileWriter out = new FileWriter(writename);
             for (int i = 0; i < data.length; i++) {
-                out.write(data[i]+",");
+                out.write(data[i]+"\n");
             }
             out.close();
 
             DataInputStream in = new DataInputStream(new FileInputStream("/Users/yanglu/Downloads/test.txt"));
             for (int i = data.length - 1; i >= 0; i--) {
-                data[i] = in.readInt();
+                data[i] = Integer.parseInt(in.readLine());
             }
             for (int i=0;i<data.length;i++) {
                 System.out.print(" " + data[i]);
