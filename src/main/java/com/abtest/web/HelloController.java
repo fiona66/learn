@@ -1,14 +1,18 @@
 package com.abtest.web;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by yanglu on 8/20/17.
  */
-@RestController
+@Controller
 public class HelloController {
 
     @RequestMapping("/hello")
@@ -20,7 +24,21 @@ public class HelloController {
     @RequestMapping("/getABtest")
     public Object getABtest() throws IOException {
         GetAbTest getAbTest = new GetAbTest();
-        return getAbTest.getAB();
+        return getAbTest.getAB("_tra");
 
     }
+
+
+    @RequestMapping("/index")
+    public String helloJsp(@RequestParam(value = "clientId", required = false)String clientId, Map<String, Object> model) throws IOException {
+
+        if (!StringUtils.isEmpty(clientId)) {
+            GetAbTest getAbTest = new GetAbTest();
+            String result = String.valueOf(getAbTest.getAB("_tra").size());
+            model.put("result", result);
+        }
+
+        return "helloJsp";
+    }
+
 }
