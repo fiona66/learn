@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,10 +35,10 @@ public class HelloController {
 
         if (!StringUtils.isEmpty(clientId)) {
             GetAbTest getAbTest = new GetAbTest();
-            String result = String.valueOf(getAbTest.getAB("_tra").size());
+//            String result = String.valueOf(getAbTest.getAB("_tra"));
+            List result = getAbTest.getAB("_tra");
             model.put("result", result);
         }
-
         return "helloJsp";
     }
 

@@ -36,8 +36,8 @@ public class GetAbTest {
             if(value5.toString().contains(searchword)) {
                 map.put("ExpCode", value5);
                 map.put("ExpVersion", value6);
-
-                list.add(map);
+                if(!value5.equals("161012_tra_norc2"))
+                    list.add(map);
             }
         }
         return list;
