@@ -52,7 +52,7 @@ public class CtrainABTestNameDAO {
 
 
                 retList.add(ctrainABTestName);
-                System.out.println(ctrainABTestName);
+//                System.out.println(ctrainABTestName);
             }
 
             //STEP 6: Clean-up environment

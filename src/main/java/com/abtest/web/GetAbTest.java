@@ -32,7 +32,7 @@ public class GetAbTest {
         Gson gson = new Gson();
         HashMap res = gson.fromJson(json, HashMap.class);
         Object value3 = res.get("Result");
-        String value4 = value3.toString();
+//        String value4 = value3.toString();
         HashMap[] arrays = gson.fromJson(value3.toString(), HashMap[].class);
         List<Map> list = new ArrayList<>();
         for(int i=0;i<arrays.length;i++){
@@ -48,7 +48,8 @@ public class GetAbTest {
 
                 if(value7!=null) {
                     list.add(map);
-                    System.out.println(list.add(map));
+//                    System.out.println(list.size());
+//                    System.out.println(list.add(map));
                 }
             }
         }
