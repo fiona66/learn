@@ -39,27 +39,30 @@ public class GetAbTest {
             Map<String,Object> map = new HashMap<String,Object>();
             Object value5 = arrays[i].get("ExpCode");
             Object value6 = arrays[i].get("ExpVersion");
+
             if(value5.toString().contains(searchword)) {
                 map.put("ExpCode", value5);
+                Object value7=existInList(value5.toString(),abresult);
+                map.put("ExCnName",value7);
                 map.put("ExpVersion", value6);
-                if(existInList(value5.toString(),abresult)) {
-                    System.out.println(map.get("ExpCode").toString());
+
+                if(value7!=null) {
                     list.add(map);
+                    System.out.println(list.add(map));
                 }
             }
         }
-        System.out.println(list.size());
         return list;
     }
 
-    private boolean existInList(String name, List<CtrainABTestName> abresult) {
-         // 遍历abresult  . 每个CtrainABTestName  判断 每个CtrainABTestName.name  == name.  return .
+    private Object existInList(String name, List<CtrainABTestName> abresult) {
         for(int i=0;i<abresult.size();i++){
             if(abresult.get(i).getExNum().equals(name)) {
-                return true;
+                String exCnName=abresult.get(i).getExCnName();
+                return exCnName;
             }
         }
-        return false;
+        return null;
 
     }
 

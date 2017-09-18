@@ -39,6 +39,7 @@ public class HelloController {
 //            String result = String.valueOf(getAbTest.getAB("_tra"));
             List result = getAbTest.getAB("_tra",clientId);
             model.put("result", result);
+            System.out.println(result);
         }
         return "helloJsp";
     }
