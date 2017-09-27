@@ -17,10 +17,10 @@ import java.util.Map;
 @Controller
 public class HelloController {
 
-    @RequestMapping("/hello")
-    public String index(){
-        return "Hello World";
-    }
+//    @RequestMapping("/hello")
+//    public String index(){
+//        return "Hello World";
+//    }
 
 
 //    @RequestMapping("/getABtest")

@@ -28,8 +28,8 @@
 <table border="1">
     <tr>
         <th>实验号</th>    <!-- tr是一行,th是表头. td是一个单元格-->
-        <th>实验名</th>
         <th>命中版本</th>
+        <th>实验名</th>
     </tr>
 
     <c:forEach items="${result}" var="map">

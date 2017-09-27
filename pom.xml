@@ -28,6 +28,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
 		</dependency>
 
 		<dependency>
@@ -92,12 +98,13 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- servlet 依赖. -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
+		<!--&lt;!&ndash; servlet 依赖. &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>javax.servlet</groupId>-->
+            <!--&lt;!&ndash;<artifactId>jstl</artifactId>>&ndash;&gt;-->
+			<!--<artifactId>javax.servlet-api</artifactId>-->
+			<!--<scope>provided</scope>-->
+		<!--</dependency>-->
 
 		<!--
             JSTL（JSP Standard T
@@ -107,28 +114,59 @@
             javax.servlet.ServletException: Circular view path [/helloJsp]: would dispatch back to the current handler URL [/helloJsp] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
 
          -->
+
+        <!--jsp页面使用jstl标签-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
 
+        <!--用于编译jsp-->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <!--<resources>-->
+        <!--<resource>-->
+            <!--<directory>${basedir}/src/main/webapp</directory>-->
+            <!--<includes>-->
+                <!--<include>**/**</include>-->
+            <!--</includes>-->
+        <!--</resource>-->
+        <!--<resource>-->
+            <!--<directory>${basedir}/src/main/resources</directory>-->
+            <!--<includes>-->
+                <!--<include>**/**</include>-->
+            <!--</includes>-->
+        <!--</resource>-->
+    <!--</resources>-->
+
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
 
 
 </project>
