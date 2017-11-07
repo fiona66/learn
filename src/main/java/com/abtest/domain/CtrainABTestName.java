@@ -7,6 +7,7 @@ public class CtrainABTestName {
     private int id;
     private String exNum;
     private String exCnName;
+    private String inStrucTions;
 
     public int getId() {
         return id;
@@ -28,6 +29,14 @@ public class CtrainABTestName {
         return exCnName;
     }
 
+    public String getInStrucTions() {
+        return inStrucTions;
+    }
+
+    public void setInStrucTions(String inStructions) {
+        this.inStrucTions = inStructions;
+    }
+
     public void setexCnName(String exCnName) {
         this.exCnName = exCnName;
     }
@@ -38,6 +47,7 @@ public class CtrainABTestName {
                 "id=" + id +
                 ", exNum='" + exNum + '\'' +
                 ", exCnName='" + exCnName + '\'' +
+                ", inStructions='" + inStrucTions + '\'' +
                 '}';
     }
 }

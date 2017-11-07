@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class CtrainABTestNameDAO {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL="jdbc:mysql://127.0.0.1:3306/abTest";
+    static final String DB_URL="jdbc:mysql://127.0.0.1:3306/abTest?autoReconnect=true&useSSL=false";
 
     //  Database credentials
     static final String USER = "root";
@@ -44,11 +44,12 @@ public class CtrainABTestNameDAO {
                 int id  = rs.getInt("id");
                 String exNum = rs.getString("exnum");
                 String exCnName = rs.getString("excname");
-
+                String inStrucTions = rs.getString("instructions");
 
                 ctrainABTestName.setId(id);
                 ctrainABTestName.setExNum(exNum);
                 ctrainABTestName.setexCnName(exCnName);
+                ctrainABTestName.setInStrucTions(inStrucTions);
 
 
                 retList.add(ctrainABTestName);

@@ -23,7 +23,8 @@ public class GetAbTestTest {
     @Test
     public void getABTest() throws Exception{
         GetAbTest getAbTest=new GetAbTest();
-        System.out.println(getAbTest.getAB("_tra","12001149610041198210"));
+//        System.out.println(getAbTest.getAB("_tra","12001149610041198210"));
+        System.out.println(getAbTest.GetAbTestFromService("_tra","12001149610041198210"));
     }
 
 }

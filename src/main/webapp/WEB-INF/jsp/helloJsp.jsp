@@ -9,7 +9,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>66的实验</title>
+    <title>火车票实验查询</title>
 </head>
 
 <body>
@@ -28,8 +28,9 @@
 <table border="1">
     <tr>
         <th>实验号</th>    <!-- tr是一行,th是表头. td是一个单元格-->
+        <th>实验说明</th>
         <th>命中版本</th>
-        <th>实验名</th>
+        <th>实验名称</th>
     </tr>
 
     <c:forEach items="${result}" var="map">
