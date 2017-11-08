@@ -4,8 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by yanglu on 9/17/17.
  */
@@ -24,7 +22,8 @@ public class GetAbTestTest {
     public void getABTest() throws Exception{
         GetAbTest getAbTest=new GetAbTest();
 //        System.out.println(getAbTest.getAB("_tra","12001149610041198210"));
-        System.out.println(getAbTest.GetAbTestFromService("_tra","12001149610041198210"));
+//        getAbTest.getAB("_tra","12001149610041198210");
+        getAbTest.getABTestFromService("12001149610041198210");
     }
 
 }

@@ -22,7 +22,7 @@ public class GetAbTest {
         CtrainABTestNameDAO ctrainABTestNameDAO = new CtrainABTestNameDAO();
         List<CtrainABTestName> abresult = ctrainABTestNameDAO.query("select * from abTest where source=0");
 
-        Document document = Jsoup.connect("https://m.ctrip.com/restapi/soa2/10290/abtest.json")
+        Document document = Jsoup.connect("http://m.ctrip.com/restapi/soa2/10290/abtest.json")
                 .data("ClientID", clientid)
                 .ignoreContentType(true)
                 .userAgent("Chrome")
@@ -67,33 +67,36 @@ public class GetAbTest {
 
     }
 
-    List<Map> GetAbTestFromService(String searchword, String clientid) throws IOException, ParseException {
+    public List<Map> getABTestFromService(String ClientID) throws IOException, ParseException {
         CtrainABTestNameDAO serviceExperiment = new CtrainABTestNameDAO();
-        List<CtrainABTestName> abresult = serviceExperiment.query("select * from abTest where source=1 ");
-
-        Document document = Jsoup.connect("http://10.2.46.178/train-product-service/api/json/GetABTestVersionForClientID")
-                .data("ClientID", clientid)
-                .data("ABTestExpName", searchword)
-                .get();
-
-        String json = document.text();
-        Gson gson = new Gson();
-        HashMap res = gson.fromJson(json, HashMap.class);
-        Object serviceResult = res.get("Result");
-        HashMap[] arrays = gson.fromJson(serviceResult.toString(), HashMap[].class);
+        List<CtrainABTestName> serviceAbResult = serviceExperiment.query("select * from abTest where source=1 ");
         List<Map> list = new ArrayList<>();
+        Map<String, Object> map = new HashMap<String, Object>();
+        for (int i = 0; i < serviceAbResult.size(); i++) {
+            String exNum=serviceAbResult.get(i).getExNum();
+            map.put("ExpCode",exNum);
 
-        for (int i = 0; i < arrays.length; i++) {
-            Map<String, Object> map = new HashMap<String, Object>();
-            Object abTestValue = arrays[i].get("ABTestValue");
-            System.out.println(abTestValue);
+            Document document = Jsoup.connect("http://10.2.46.178/train-product-service/api/json/GetABTestVersionForClientID")
+                    .data("ClientID",ClientID)
+                    .data("ABTestExpName", exNum)
+                    .ignoreContentType(true)
+                    .userAgent("Chrome")
+                    .get();
 
+            String json = document.text();
+            Gson gson = new Gson();
+            HashMap res = gson.fromJson(json, HashMap.class);
+            Object serviceResult = res.get("ABTestValue");
 
-//            if(abTestValue.toString().contains(searchword)) {
-//                map.put("ExpCode", value5);
-//                CtrainABTestName value7=existInList(value5.toString(),abresult);
-//                map.put("ExpVersion", value6);
+            map.put("ExpVersion",serviceResult);
+            map.put("ExCnName", serviceAbResult.get(i).getExCnName());
+            map.put("ExInstructions", serviceAbResult.get(i).getInStrucTions());
+            list.add(map);
+            System.out.println(list);
         }
+
         return list;
     }
 }
+
+

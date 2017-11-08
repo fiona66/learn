@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -29,8 +28,7 @@ public class HelloController {
 //        return getAbTest.getAB("_tra");
 //
 //    }
-
-
+    
     @RequestMapping("/index")
     public String helloJsp(@RequestParam(value = "clientId", required = false)String clientId, Map<String, Object> model) throws IOException, ParseException {
         System.out.println(clientId);
@@ -38,6 +36,7 @@ public class HelloController {
             GetAbTest getAbTest = new GetAbTest();
 //            String result = String.valueOf(getAbTest.getAB("_tra"));
             List result = getAbTest.getAB("_tra",clientId);
+//            List result = getAbTest.getABTestFromService(clientId);
             model.put("result", result);
 //            System.out.println(result);
         }
