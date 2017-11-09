@@ -71,14 +71,15 @@ public class GetAbTest {
         CtrainABTestNameDAO serviceExperiment = new CtrainABTestNameDAO();
         List<CtrainABTestName> serviceAbResult = serviceExperiment.query("select * from abTest where source=1 ");
         List<Map> list = new ArrayList<>();
-        Map<String, Object> map = new HashMap<String, Object>();
         for (int i = 0; i < serviceAbResult.size(); i++) {
-            String exNum=serviceAbResult.get(i).getExNum();
+            Map<String, Object> map = new HashMap<String, Object>();
+            Object exNum=serviceAbResult.get(i).getExNum();
+            String stringExNum=exNum.toString();
             map.put("ExpCode",exNum);
 
             Document document = Jsoup.connect("http://10.2.46.178/train-product-service/api/json/GetABTestVersionForClientID")
                     .data("ClientID",ClientID)
-                    .data("ABTestExpName", exNum)
+                    .data("ABTestExpName", stringExNum)
                     .ignoreContentType(true)
                     .userAgent("Chrome")
                     .get();
@@ -92,9 +93,9 @@ public class GetAbTest {
             map.put("ExCnName", serviceAbResult.get(i).getExCnName());
             map.put("ExInstructions", serviceAbResult.get(i).getInStrucTions());
             list.add(map);
-            System.out.println(list);
-        }
 
+        }
+        System.out.println(list);
         return list;
     }
 }

@@ -22,18 +22,17 @@
 
 </form>
 
-你的机器命中实验情况如下: <br />
+你的机器命中页面端实验情况如下: <br />
 <%--<h5>${result}  </h5>--%>
 
-<table border="1">
+<table border="1" bgcolor="#FDFFFF">
     <tr>
         <th>实验号</th>    <!-- tr是一行,th是表头. td是一个单元格-->
         <th>实验说明</th>
         <th>命中版本</th>
         <th>实验名称</th>
     </tr>
-
-    <c:forEach items="${result}" var="map">
+    <c:forEach items="${resultPage}" var="map">
     <tr>
             <c:forEach items="${map}" var="entry">
             <td>  ${entry.value}  </td>
@@ -42,5 +41,21 @@
     </c:forEach>
 </table>
 
+服务端实验下发情况如下： <br />
+<table border="1" bgcolor="#ECF5FF">
+    <tr>
+        <th>实验号</th>    <!-- tr是一行,th是表头. td是一个单元格-->
+        <th>实验说明</th>
+        <th>命中版本</th>
+        <th>实验名称</th>
+    </tr>
+    <c:forEach items="${resultService}" var="map">
+    <tr>
+        <c:forEach items="${map}" var="entry">
+            <td>  ${entry.value}  </td>
+        </c:forEach>
+    </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.abtest.web;
 
+import com.abtest.dao.CtrainABTestNameDAO;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,32 +16,34 @@ import java.util.Map;
  */
 @Controller
 public class HelloController {
-
-//    @RequestMapping("/hello")
-//    public String index(){
-//        return "Hello World";
-//    }
-
-
-//    @RequestMapping("/getABtest")
-//    public Object getABtest() throws IOException {
-//        GetAbTest getAbTest = new GetAbTest();
-//        return getAbTest.getAB("_tra");
-//
-//    }
-    
     @RequestMapping("/index")
-    public String helloJsp(@RequestParam(value = "clientId", required = false)String clientId, Map<String, Object> model) throws IOException, ParseException {
+    public String helloJsp(@RequestParam(value = "clientId", required = false) String clientId, Map<String, Object> model) throws IOException, ParseException {
         System.out.println(clientId);
-        if (!StringUtils.isEmpty(clientId)) {
-            GetAbTest getAbTest = new GetAbTest();
-//            String result = String.valueOf(getAbTest.getAB("_tra"));
-            List result = getAbTest.getAB("_tra",clientId);
-//            List result = getAbTest.getABTestFromService(clientId);
-            model.put("result", result);
-//            System.out.println(result);
+        CtrainABTestNameDAO ctrainABTestNameDAO = new CtrainABTestNameDAO();
+        List appResult = ctrainABTestNameDAO.query("select * from abTest where source=0");
+        List serviceResult = ctrainABTestNameDAO.query("select * from abTest where source=1 ");
+        GetAbTest getAbTest = new GetAbTest();
+        if (!StringUtils.isEmpty(clientId)){
+            if (!appResult.isEmpty()) {
+                List resultPage = getAbTest.getAB("_tra", clientId);
+                model.put("resultPage", resultPage);
+            }
+            if (!serviceResult.isEmpty()) {
+                List resultService = getAbTest.getABTestFromService(clientId);
+                model.put("resultService", resultService);
+            }
         }
-        return "helloJsp";
+    return  "helloJsp";
     }
-
 }
+
+
+//        if (!StringUtils.isEmpty(clientId)) {
+//            GetAbTest getAbTest = new GetAbTest();
+////            List result = getAbTest.getAB("_tra",clientId);
+//            List result = getAbTest.getABTestFromService(clientId);
+//            model.put("result", result);
+//        }
+//        return "helloJsp";
+//    }
+//}
