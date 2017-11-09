@@ -17,7 +17,7 @@
 
 
 <form action="/index" method="get">
-    <h3>请输入ClientId : <span><input name="clientId" ></span>
+    <h3>请输入ClientId : <span><input name="clientId" id="clientId" value="${clientId}"></span>
     <input type="submit" value="查询"></h3>
 
 </form>
@@ -57,5 +57,18 @@
     </tr>
     </c:forEach>
 </table>
+<%--<script type="application/javascript">--%>
+
+    <%--function GetQueryString(name) {--%>
+        <%--var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");--%>
+        <%--var r = window.location.search.substr(1).match(reg);--%>
+        <%--if(r!=null)return  unescape(r[2]); return null;--%>
+    <%--}--%>
+
+    <%--var clientId = GetQueryString('clientId')--%>
+<%--//    console.log(clientId)--%>
+    <%--document.getElementById('clientId').value = clientId;--%>
+
+<%--</script>--%>
 </body>
 </html>

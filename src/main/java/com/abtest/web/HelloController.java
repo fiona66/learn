@@ -19,6 +19,7 @@ public class HelloController {
     @RequestMapping("/index")
     public String helloJsp(@RequestParam(value = "clientId", required = false) String clientId, Map<String, Object> model) throws IOException, ParseException {
         System.out.println(clientId);
+        model.put("clientId", clientId);
         CtrainABTestNameDAO ctrainABTestNameDAO = new CtrainABTestNameDAO();
         List appResult = ctrainABTestNameDAO.query("select * from abTest where source=0");
         List serviceResult = ctrainABTestNameDAO.query("select * from abTest where source=1 ");
