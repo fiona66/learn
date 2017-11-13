@@ -28,23 +28,15 @@ public class HelloController {
             if (!appResult.isEmpty()) {
                 List resultPage = getAbTest.getAB("_tra", clientId);
                 model.put("resultPage", resultPage);
+                System.out.println(resultPage);
             }
             if (!serviceResult.isEmpty()) {
                 List resultService = getAbTest.getABTestFromService(clientId);
                 model.put("resultService", resultService);
+                System.out.println(resultService);
             }
         }
     return  "helloJsp";
     }
 }
 
-
-//        if (!StringUtils.isEmpty(clientId)) {
-//            GetAbTest getAbTest = new GetAbTest();
-////            List result = getAbTest.getAB("_tra",clientId);
-//            List result = getAbTest.getABTestFromService(clientId);
-//            model.put("result", result);
-//        }
-//        return "helloJsp";
-//    }
-//}

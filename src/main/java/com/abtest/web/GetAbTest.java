@@ -77,7 +77,7 @@ public class GetAbTest {
             String stringExNum=exNum.toString();
             map.put("ExpCode",exNum);
 
-            Document document = Jsoup.connect("http://10.2.46.178/train-product-service/api/json/GetABTestVersionForClientID")
+            Document document = Jsoup.connect("http://ws.product.trains.sh.ctriptravel.com/train-product-service/api/json/GetABTestVersionForClientID")
                     .data("ClientID",ClientID)
                     .data("ABTestExpName", stringExNum)
                     .ignoreContentType(true)
@@ -99,5 +99,4 @@ public class GetAbTest {
         return list;
     }
 }
-
 

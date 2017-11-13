@@ -12,7 +12,7 @@
     <title>火车票实验查询</title>
     <style>
         .bottom {
-            background-color: lightgreen;
+            background-color: forestgreen;
             border-radius: 4px;
             padding:5px 10px;
             font-size: 12px;
@@ -22,8 +22,9 @@
         }
 
         .bottom:hover{
-            background-color: green;
+            background-color: lightgreen;
             box-shadow: #999999 0 0 2px;
+            cursor: pointer;
         }
         #clientId{
             width: 150px;

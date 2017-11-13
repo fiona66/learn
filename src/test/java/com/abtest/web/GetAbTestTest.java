@@ -23,7 +23,8 @@ public class GetAbTestTest {
         GetAbTest getAbTest=new GetAbTest();
 //        System.out.println(getAbTest.getAB("_tra","12001149610041198210"));
 //        getAbTest.getAB("_tra","12001149610041198210");
-        getAbTest.getABTestFromService("12001149610041198210");
+        getAbTest.getABTestFromService("32001124810056535651");
+
     }
 
 }

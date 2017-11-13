@@ -7538,3 +7538,736 @@ Connecting to database...
 Creating statement...
 Goodbye!
 [{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=A, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=B, ExCnName=临近火车站}]
+2017-11-09 20:32:54.757  INFO 14923 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Thu Nov 09 19:20:33 CST 2017]; root of context hierarchy
+2017-11-09 20:32:54.777  INFO 14923 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-09 20:33:09.487  INFO 15518 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 15518 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-09 20:33:09.493  INFO 15518 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-09 20:33:09.624  INFO 15518 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Thu Nov 09 20:33:09 CST 2017]; root of context hierarchy
+2017-11-09 20:33:12.195  INFO 15518 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+2017-11-09 20:33:12.218  INFO 15518 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-11-09 20:33:12.219  INFO 15518 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-09 20:33:12.827  INFO 15518 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-09 20:33:13.224  INFO 15518 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-09 20:33:13.224  INFO 15518 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3604 ms
+2017-11-09 20:33:13.551  INFO 15518 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-09 20:33:13.563  INFO 15518 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-09 20:33:13.564  INFO 15518 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-09 20:33:13.565  INFO 15518 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-09 20:33:13.565  INFO 15518 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-09 20:33:14.193  INFO 15518 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Thu Nov 09 20:33:09 CST 2017]; root of context hierarchy
+2017-11-09 20:33:14.343  INFO 15518 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-09 20:33:14.350  INFO 15518 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-09 20:33:14.350  INFO 15518 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-09 20:33:14.392  INFO 15518 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-09 20:33:14.392  INFO 15518 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-09 20:33:14.457  INFO 15518 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-09 20:33:14.840  INFO 15518 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-09 20:33:15.007  INFO 15518 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8666 (http)
+2017-11-09 20:33:15.019  INFO 15518 --- [           main] com.abtest.web.Chapter1Application       : Started Chapter1Application in 6.129 seconds (JVM running for 7.285)
+2017-11-09 20:33:22.281  INFO 15518 --- [nio-8666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-11-09 20:33:22.281  INFO 15518 --- [nio-8666-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-11-09 20:33:22.364  INFO 15518 --- [nio-8666-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 83 ms
+12001159510057481163
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=A, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=B, ExCnName=临近火车站}]
+xxxxxx
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=A, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=A, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=B, ExCnName=临近火车站}]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-13 20:25:47.323  INFO 31297 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 31297 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-13 20:25:47.331  INFO 31297 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-13 20:25:47.661  INFO 31297 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:25:47 CST 2017]; root of context hierarchy
+null
+Connecting to database...
+2017-11-13 20:25:52.799  INFO 31297 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+2017-11-13 20:25:52.878  INFO 31297 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+Goodbye!
+2017-11-13 20:25:52.886  INFO 31297 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-13 20:25:54.158  INFO 31297 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-13 20:25:54.903  INFO 31297 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-13 20:25:54.905  INFO 31297 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7251 ms
+2017-11-13 20:25:55.280  INFO 31297 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-13 20:25:55.293  INFO 31297 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-13 20:25:55.311  INFO 31297 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-13 20:25:55.312  INFO 31297 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-13 20:25:55.312  INFO 31297 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-13 20:25:55.994  INFO 31297 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:25:47 CST 2017]; root of context hierarchy
+2017-11-13 20:25:56.239  INFO 31297 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-13 20:25:56.245  INFO 31297 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-13 20:25:56.245  INFO 31297 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-13 20:25:56.390  INFO 31297 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:25:56.391  INFO 31297 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:25:56.456  INFO 31297 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+2017-11-13 20:25:57.251  INFO 31297 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-13 20:25:57.428 ERROR 31297 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler [http-nio-8666]
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+
+2017-11-13 20:25:57.433 ERROR 31297 --- [           main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8666]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8666]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1000) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 21 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 22 common frames omitted
+
+2017-11-13 20:25:57.479  INFO 31297 --- [           main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2017-11-13 20:25:57.503  WARN 31297 --- [ost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2017-11-13 20:25:57.528  INFO 31297 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-13 20:25:57.533 ERROR 31297 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8666 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8666, or configure this application to listen on another port.
+
+2017-11-13 20:25:57.536  INFO 31297 --- [           main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:25:47 CST 2017]; root of context hierarchy
+2017-11-13 20:25:57.538  INFO 31297 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-13 20:36:38.582  INFO 31390 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 31390 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-13 20:36:38.589  INFO 31390 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-13 20:36:38.770  INFO 31390 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:36:38 CST 2017]; root of context hierarchy
+2017-11-13 20:36:41.794  INFO 31390 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+2017-11-13 20:36:41.821  INFO 31390 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-11-13 20:36:41.823  INFO 31390 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-13 20:36:42.605  INFO 31390 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-13 20:36:43.085  INFO 31390 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-13 20:36:43.087  INFO 31390 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4320 ms
+2017-11-13 20:36:43.553  INFO 31390 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-13 20:36:43.573  INFO 31390 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-13 20:36:43.573  INFO 31390 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-13 20:36:43.573  INFO 31390 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-13 20:36:43.574  INFO 31390 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-13 20:36:44.046  INFO 31390 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:36:38 CST 2017]; root of context hierarchy
+2017-11-13 20:36:44.206  INFO 31390 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-13 20:36:44.216  INFO 31390 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-13 20:36:44.216  INFO 31390 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-13 20:36:44.266  INFO 31390 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:36:44.267  INFO 31390 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:36:44.328  INFO 31390 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:36:44.774  INFO 31390 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-13 20:36:44.884 ERROR 31390 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler [http-nio-8666]
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+
+2017-11-13 20:36:44.887 ERROR 31390 --- [           main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8666]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8666]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1000) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 21 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 22 common frames omitted
+
+2017-11-13 20:36:44.943  INFO 31390 --- [           main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2017-11-13 20:36:44.966  WARN 31390 --- [ost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2017-11-13 20:36:45.005  INFO 31390 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-13 20:36:45.016 ERROR 31390 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8666 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8666, or configure this application to listen on another port.
+
+2017-11-13 20:36:45.022  INFO 31390 --- [           main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:36:38 CST 2017]; root of context hierarchy
+2017-11-13 20:36:45.024  INFO 31390 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+null
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+null
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=B, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=A, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=B, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=A, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=B, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+2017-11-13 20:42:23.983  INFO 15518 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Thu Nov 09 20:33:09 CST 2017]; root of context hierarchy
+2017-11-13 20:42:24.123  INFO 15518 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+Exception in thread "Thread-3" java.lang.NoClassDefFoundError: org/apache/catalina/Lifecycle$SingleUse
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:240)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:353)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.stopTomcat(TomcatEmbeddedServletContainer.java:238)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.stop(TomcatEmbeddedServletContainer.java:292)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.stopAndReleaseEmbeddedServletContainer(EmbeddedWebApplicationContext.java:306)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onClose(EmbeddedWebApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1015)
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-13 20:42:45.360  INFO 31565 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 31565 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-13 20:42:45.366  INFO 31565 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-13 20:42:45.459  INFO 31565 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:42:45 CST 2017]; root of context hierarchy
+2017-11-13 20:42:48.040  INFO 31565 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+2017-11-13 20:42:48.075  INFO 31565 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-11-13 20:42:48.078  INFO 31565 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-13 20:42:48.647  INFO 31565 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-13 20:42:48.996  INFO 31565 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-13 20:42:48.997  INFO 31565 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3543 ms
+2017-11-13 20:42:49.260  INFO 31565 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-13 20:42:49.273  INFO 31565 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-13 20:42:49.274  INFO 31565 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-13 20:42:49.274  INFO 31565 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-13 20:42:49.274  INFO 31565 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-13 20:42:49.756  INFO 31565 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:42:45 CST 2017]; root of context hierarchy
+2017-11-13 20:42:49.895  INFO 31565 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-13 20:42:49.901  INFO 31565 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-13 20:42:49.901  INFO 31565 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-13 20:42:49.959  INFO 31565 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:42:49.959  INFO 31565 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:42:50.022  INFO 31565 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:42:50.434  INFO 31565 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-13 20:42:50.566  INFO 31565 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8666 (http)
+2017-11-13 20:42:50.575  INFO 31565 --- [           main] com.abtest.web.Chapter1Application       : Started Chapter1Application in 5.923 seconds (JVM running for 6.851)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-13 20:43:16.811  INFO 31676 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 31676 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-13 20:43:16.816  INFO 31676 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-13 20:43:17.024  INFO 31676 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:43:17 CST 2017]; root of context hierarchy
+Exception in thread "ContainerBackgroundProcessor[StandardEngine[Tomcat]]" java.lang.NoClassDefFoundError: ch/qos/logback/classic/spi/ThrowableProxy
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at org.slf4j.bridge.SLF4JBridgeHandler.callLocationAwareLogger(SLF4JBridgeHandler.java:221)
+	at org.slf4j.bridge.SLF4JBridgeHandler.publish(SLF4JBridgeHandler.java:303)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.logp(Logger.java:1042)
+	at org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:181)
+	at org.apache.juli.logging.DirectJDKLog.error(DirectJDKLog.java:147)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.classic.spi.ThrowableProxy
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:370)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 13 more
+Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:240)
+	at org.springframework.boot.loader.jar.ZipInflaterInputStream.fill(ZipInflaterInputStream.java:62)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	at org.springframework.boot.loader.jar.ZipInflaterInputStream.read(ZipInflaterInputStream.java:52)
+	at sun.misc.Resource.getBytes(Resource.java:124)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:462)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	... 19 more
+2017-11-13 20:43:19.750  INFO 31676 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+2017-11-13 20:43:19.809  INFO 31676 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-11-13 20:43:19.813  INFO 31676 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-13 20:43:20.378  INFO 31676 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-13 20:43:20.715  INFO 31676 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-13 20:43:20.716  INFO 31676 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3696 ms
+2017-11-13 20:43:21.003  INFO 31676 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-13 20:43:21.010  INFO 31676 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-13 20:43:21.011  INFO 31676 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-13 20:43:21.011  INFO 31676 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-13 20:43:21.011  INFO 31676 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-13 20:43:21.386  INFO 31676 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:43:17 CST 2017]; root of context hierarchy
+2017-11-13 20:43:21.506  INFO 31676 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-13 20:43:21.512  INFO 31676 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-13 20:43:21.513  INFO 31676 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-13 20:43:21.558  INFO 31676 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:43:21.558  INFO 31676 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:43:21.611  INFO 31676 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:43:21.909  INFO 31676 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-13 20:43:21.968 ERROR 31676 --- [           main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler [http-nio-8666]
+
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+
+2017-11-13 20:43:21.972 ERROR 31676 --- [           main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8666]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8666]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:247) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:190) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) [spring-context-4.3.7.RELEASE.jar!/:4.3.7.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:737) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:370) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1162) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1151) [spring-boot-1.5.2.RELEASE.jar!/:1.5.2.RELEASE]
+	at com.abtest.web.Chapter1Application.main(Chapter1Application.java:15) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [learn-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1000) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 21 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_151]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_151]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:980) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:993) ~[tomcat-embed-core-8.5.11.jar!/:8.5.11]
+	... 22 common frames omitted
+
+2017-11-13 20:43:22.040  INFO 31676 --- [           main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2017-11-13 20:43:22.054  WARN 31676 --- [ost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+2017-11-13 20:43:22.083  INFO 31676 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2017-11-13 20:43:22.087 ERROR 31676 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8666 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8666, or configure this application to listen on another port.
+
+2017-11-13 20:43:22.091  INFO 31676 --- [           main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:43:17 CST 2017]; root of context hierarchy
+2017-11-13 20:43:22.094  INFO 31676 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+Exception in thread "http-nio-8666-Acceptor-0" java.lang.NoClassDefFoundError: org/apache/tomcat/util/ExceptionUtils
+	at org.apache.tomcat.util.net.NioEndpoint$Acceptor.run(NioEndpoint.java:470)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.util.ExceptionUtils
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:370)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 2 more
+Caused by: java.io.EOFException: Unexpected end of ZLIB input stream
+	at java.util.zip.InflaterInputStream.fill(InflaterInputStream.java:240)
+	at org.springframework.boot.loader.jar.ZipInflaterInputStream.fill(ZipInflaterInputStream.java:62)
+	at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+	at org.springframework.boot.loader.jar.ZipInflaterInputStream.read(ZipInflaterInputStream.java:52)
+	at sun.misc.Resource.getBytes(Resource.java:124)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:462)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	... 8 more
+2017-11-13 20:46:07.028  INFO 31565 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:42:45 CST 2017]; root of context hierarchy
+2017-11-13 20:46:07.033  INFO 31565 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+Exception in thread "Thread-3" java.lang.NoClassDefFoundError: org/apache/catalina/Lifecycle$SingleUse
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:240)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:353)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.stopTomcat(TomcatEmbeddedServletContainer.java:238)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.stop(TomcatEmbeddedServletContainer.java:292)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.stopAndReleaseEmbeddedServletContainer(EmbeddedWebApplicationContext.java:306)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onClose(EmbeddedWebApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1015)
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-11-13 20:46:32.336  INFO 31766 --- [           main] com.abtest.web.Chapter1Application       : Starting Chapter1Application v0.0.1-SNAPSHOT on dst55705.cn1.global.ctrip.com with PID 31766 (/Users/yanglu/git/learn/target/learn-0.0.1-SNAPSHOT.jar started by yanglu in /Users/yanglu/git/learn)
+2017-11-13 20:46:32.340  INFO 31766 --- [           main] com.abtest.web.Chapter1Application       : No active profile set, falling back to default profiles: default
+2017-11-13 20:46:32.441  INFO 31766 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:46:32 CST 2017]; root of context hierarchy
+2017-11-13 20:46:34.977  INFO 31766 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8666 (http)
+2017-11-13 20:46:35.003  INFO 31766 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-11-13 20:46:35.008  INFO 31766 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-11-13 20:46:35.492  INFO 31766 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-11-13 20:46:35.841  INFO 31766 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-11-13 20:46:35.841  INFO 31766 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3405 ms
+2017-11-13 20:46:36.111  INFO 31766 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-13 20:46:36.118  INFO 31766 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-13 20:46:36.118  INFO 31766 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-13 20:46:36.119  INFO 31766 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-13 20:46:36.121  INFO 31766 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-13 20:46:36.964  INFO 31766 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5a2e4553: startup date [Mon Nov 13 20:46:32 CST 2017]; root of context hierarchy
+2017-11-13 20:46:37.655  INFO 31766 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index]}" onto public java.lang.String com.abtest.web.HelloController.helloJsp(java.lang.String,java.util.Map<java.lang.String, java.lang.Object>) throws java.io.IOException,java.text.ParseException
+2017-11-13 20:46:37.664  INFO 31766 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-13 20:46:37.666  INFO 31766 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-13 20:46:37.725  INFO 31766 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:46:37.725  INFO 31766 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:46:38.085  INFO 31766 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-13 20:46:38.580  INFO 31766 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-13 20:46:38.719  INFO 31766 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8666 (http)
+2017-11-13 20:46:38.732  INFO 31766 --- [           main] com.abtest.web.Chapter1Application       : Started Chapter1Application in 7.042 seconds (JVM running for 7.719)
+2017-11-13 20:46:40.188  INFO 31766 --- [nio-8666-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-11-13 20:46:40.188  INFO 31766 --- [nio-8666-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-11-13 20:46:40.211  INFO 31766 --- [nio-8666-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+null
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+32001124810056535651
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170323_tra_djt, ExInstructions=A:老版列表单列;B:新版列表;C,D老版对照, ExpVersion=B, ExCnName=大交通}, {ExpCode=170324_tra_wfp, ExInstructions=A:老版本无往返;B:新版本有往返;C,D对照无往返, ExpVersion=B, ExCnName=往返票}, {ExpCode=170331_tra_zlpc, ExInstructions=A:不走PC;B:走PC, ExpVersion=B, ExCnName=直连PC}, {ExpCode=170417_tra_sjxt, ExInstructions=A:直连数据;B:数据系统, ExpVersion=B, ExCnName=数据系统}, {ExpCode=170426_tra_srdz, ExInstructions=A:Native;B:RN, ExpVersion=B, ExCnName=私人定制RN}, {ExpCode=170505_sch_train, ExInstructions=A:携程大首页无全站搜索入口;B:有入口, ExpVersion=B, ExCnName=全站首页增加交通入口}, {ExpCode=170525_tra_zfqb, ExInstructions=A:强绑;B:下次再说+截止时间;C,D对照, ExpVersion=A, ExCnName=支付强绑}, {ExpCode=170711_tra_qpcgl, ExInstructions=A:无成功率;B:显示成功率;C,D对照无成功率, ExpVersion=D, ExCnName=抢票成功率}, {ExpCode=170728_tra_jsgb, ExInstructions=A:旧版,B:新版;C,D老版对照, ExpVersion=C, ExCnName=主流程接送站改版}, {ExpCode=170802_tra_scsj, ExInstructions=A:旧版,B:新版;C,D老版对照, ExpVersion=A, ExCnName=送火车默认时间}, {ExpCode=170828_tra_sjsd, ExInstructions=A:旧版,B:新版;C,D老版对照, ExpVersion=B, ExCnName=火车推随叫随到}, {ExpCode=170919_tra_jpfq, ExInstructions=A:不发券;B:发券, ExpVersion=A, ExCnName=机票发券}, {ExpCode=171018_tra_tcxz, ExInstructions=A:Native;B:RN, ExpVersion=A, ExCnName=套餐选择RN}, {ExpCode=171026_tra_xlcqp, ExInstructions=A:原版;B:新版, ExpVersion=B, ExCnName=新流程抢票}]
+Connecting to database...
+Creating statement...
+Goodbye!
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=D, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=A, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=B, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=A, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=B, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=A, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
+[{ExpCode=170524_tra_xzf, ExInstructions=A:旧版;B:二次支付;C:实名账户;D:非实名账户;E:开卡弱版, ExpVersion=E, ExCnName=新支付}, {ExpCode=170505_tra_yhhx, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=D, ExCnName=用户画像}, {ExpCode=170922_tra_sffl, ExInstructions=A:老版本;B,C,D,E实验组, ExpVersion=A, ExCnName=算法分流}, {ExpCode=171014_tra_tcqz1, ExInstructions=A:老;B:携程预订-优选套餐;C:携程预订-租车券;<br>D:携程预订+租车券;E:携程预订+优惠券, ExpVersion=A, ExCnName=套餐前置1}, {ExpCode=170828_tra_jqsy, ExInstructions=A:走.net;B:走java, ExpVersion=B, ExCnName=景区实验}, {ExpCode=170809_tra_dtbjs, ExInstructions=A:老;B:不计算, ExpVersion=B, ExCnName=大交通超短途不计算}, {ExpCode=170809_tra_lsdd, ExInstructions=A:无历史订单;B:有历史订单, ExpVersion=A, ExCnName=大交通历史订单}, {ExpCode=170801_tra_zzfl, ExInstructions=A:陈曦;B：马晓芸, ExpVersion=B, ExCnName=中转方案分流AB}, {ExpCode=170727_tra_jthc1, ExInstructions=A:不推;B:推;C,D:不推, ExpVersion=B, ExCnName=酒推火新客}, {ExpCode=170510_tra_sfzsy, ExInstructions=A:1组;B:2组, ExpVersion=B, ExCnName=算法组实验}, {ExpCode=171102_tra_12306, ExInstructions=A:有12306线路;B:没有12306线路, ExpVersion=B, ExCnName=测试12306线路}, {ExpCode=171019_tra_qhxk, ExInstructions=A:不发券;B:发券;C:不发券, ExpVersion=A, ExCnName=汽推火新客}, {ExpCode=170619_tra_ljhcz, ExInstructions=A:无临近;B:有临近, ExpVersion=A, ExCnName=临近火车站}]
